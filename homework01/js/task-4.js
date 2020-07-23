@@ -9,7 +9,6 @@ if (isBuyOrder === null || isBuyOrder === '') {
     alert('Отменено пользователем!');
 } else if (isBuyOrder * pricePerDroid <= credits) {
     totalPrice = isBuyOrder * pricePerDroid;
-    console.log(totalPrice);
     alert(`Вы купили ${isBuyOrder} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
 } else {
     alert('Недостаточно средств на счету!');

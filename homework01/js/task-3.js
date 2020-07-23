@@ -1,6 +1,6 @@
 "use strict";
 
-const ADMIN_PASSWORD = 'qwe'
+const ADMIN_PASSWORD = 'jqueryismyjame'
 const isUserPassword = prompt('Введите пароль');
 let message;
 
