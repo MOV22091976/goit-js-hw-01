@@ -3,12 +3,11 @@
 const credits = 23580;
 const pricePerDroid = 3000;
 const isBuyOrder = prompt('Сколько дроидов хотите купить?', '');
-let totalPrice = 0;
+const totalPrice = isBuyOrder * pricePerDroid;
 
-if (isBuyOrder === null || isBuyOrder === '') {
+if (isBuyOrder === null) {
     alert('Отменено пользователем!');
-} else if (isBuyOrder * pricePerDroid <= credits) {
-    totalPrice = isBuyOrder * pricePerDroid;
+} else if (totalPrice <= credits) {
     alert(`Вы купили ${isBuyOrder} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
 } else {
     alert('Недостаточно средств на счету!');
