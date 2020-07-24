@@ -5,6 +5,13 @@ let total = 0;
 
 do {
     input = prompt('Введите число')
-    total += +input
+    if (input !== null) {
+        if (Number.isNaN(+input)) {
+            alert('Было введено не число, попробуйте еще раз');
+            continue;
+        }
+        total += +input;
+    }
 } while (input !== null)
-alert(`Общая сумма чисел равна ${total}`);
+
+alert(`Общая сумма чисел равна ${+total}`);
